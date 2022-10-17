@@ -10,7 +10,7 @@ app.set("port", port);
 
 app.get("/", (req, res) => {
 
-
+	let result;
 	(async () => {
 		/**
 		 * @description 기사의 메타 정보를 추출합니다.
@@ -132,6 +132,7 @@ app.get("/", (req, res) => {
 		try {
 		  // 4. 웹페에지의 페이지 소스를 확인한다. => 페이지 소스 코드를 얻는다.
 		  html = await response.text();
+		  result = html;
 		} catch (error) {
 		  console.error(error);
 		  return;
