@@ -12,7 +12,7 @@ let result;
 
 const getHtml = async () => {
 	try {
-		return await axios.get('https://news.naver.com');
+		return await axios.get('https://www.naver.com');
 	}catch (error) {
 		console.error(error);
 	}
